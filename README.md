@@ -1,2 +1,1 @@
-# scripting-grimoire-
-# scripting-grimoire-
+The following repository is a compilation of scripts I've done in order to practice scripting
