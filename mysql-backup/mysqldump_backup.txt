@@ -1,0 +1,1 @@
+mysqldump -u username -ppassword databasename > destinationdirectory\databasename.sql

@@ -1,0 +1,18 @@
+#Defining default value of a parameter
+
+
+
+Function Get-MachineInfo
+
+
+{
+[CmdLetBinding(SupportShouldProcess)]
+
+ param ( [String[]]$make = "IBM", $OperatingSystem)
+
+Write-Verbose "Sharing Information about my Laptop Stock"
+write-Host "I have $make Laptops with $OperatingSystem OS"
+}
+
+
+

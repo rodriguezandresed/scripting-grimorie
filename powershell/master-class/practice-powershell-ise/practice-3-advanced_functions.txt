@@ -1,0 +1,27 @@
+## Creating Advanced Functions
+
+
+#you can use Get-Help <command> in order to get information about that command
+
+#lists paramaters of functions
+(Get-command -Name Get-Service).parameters.keys
+
+(Get-command -Name Get-MachineInfo).parameters.keys
+
+Function Get-MachineInfo
+
+{
+[CmdLetBinding()]
+ param ($make, $OperatingSystem)
+
+Write-Verbose "Sharing Information about my Laptop Stock"
+write-Host "I have $make Laptops with $OperatingSystem OS"
+}
+
+#Making a function advanced makes it so that it recieves more inbuilt parameters in order to be used (i.e Verbose)
+
+
+#checking that the parameters were added
+(Get-command -Name Get-MachineInfo).parameters.keys
+
+Get-MachineInfo -Verbose

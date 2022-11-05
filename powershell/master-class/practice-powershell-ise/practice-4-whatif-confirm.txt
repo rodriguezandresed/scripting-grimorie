@@ -1,0 +1,22 @@
+#Adding WhatIf & Confirm Parameters
+
+#seeing that function doesn't have whatif
+(Get-command -Name Get-MachineInfo).parameters.keys
+
+Function Get-MachineInfo
+
+
+#we need to add the keyword for process/whatif parameters in the argument of cmdLetBinding
+{
+[CmdLetBinding(SupportShouldProcess)]
+ param ($make, $OperatingSystem)
+
+Write-Verbose "Sharing Information about my Laptop Stock"
+write-Host "I have $make Laptops with $OperatingSystem OS"
+}
+
+#Making a function advanced makes it so that it recieves more inbuilt parameters in order to be used (i.e Verbose)
+
+(Get-command -Name Get-MachineInfo).parameters.keys
+
+Get-MachineInfo -Verbose

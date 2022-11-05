@@ -1,0 +1,45 @@
+#Writting comment based help for a function
+
+
+Function Get-MachineInfo
+
+
+{
+
+<# 
+.SYNOPSIS
+Sharing Machine Information
+
+.DESCRIPTION
+This is being used to display information about my laptop stock
+
+.PARAMETER make
+This parameter is used to provide the brand of the laptop.
+
+.PARAMETER OperatingSystem
+This defines the OS of my laptops.
+
+.EXAMPLE
+Get-MachineInfo
+
+.EXAMPLE 
+Get-MachineInfo -make "Dell"
+
+.NOTES
+Author: Andres Rodriguez
+Website: rodriguezandresed
+
+#>
+
+
+
+[CmdLetBinding(SupportShouldProcess)]
+
+ param ( [String[]]$make = "IBM", $OperatingSystem)
+
+Write-Verbose "Sharing Information about my Laptop Stock"
+write-Host "I have $make Laptops with $OperatingSystem OS"
+}
+
+
+

@@ -1,0 +1,21 @@
+#Declaring Mandatory Parameter
+
+
+
+Function Get-MachineInfo
+
+
+
+{
+[CmdLetBinding(SupportShouldProcess)]
+#on this case, the only mandatory parameter will be $make
+ param (   [Parameter(Mandatory)]$make, $OperatingSystem)
+
+Write-Verbose "Sharing Information about my Laptop Stock"
+write-Host "I have $make Laptops with $OperatingSystem OS"
+}
+
+
+#If the parameter wasn't specified, it will ask the user to input the parameter
+
+Get-MachineInfo

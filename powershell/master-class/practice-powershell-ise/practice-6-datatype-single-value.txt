@@ -1,0 +1,35 @@
+#Ensuring single value against a parameter
+
+
+
+Function Get-MachineInfo
+
+
+{
+[CmdLetBinding(SupportShouldProcess)]
+
+ param ( [String]$make, $OperatingSystem)
+
+Write-Verbose "Sharing Information about my Laptop Stock"
+write-Host "I have $make Laptops with $OperatingSystem OS"
+}
+
+
+
+
+Get-MachineInfo - make "Dell"
+
+
+
+#array example 
+
+Function Get-MachineInfo
+
+
+
+ param ( [String[]]$make, $OperatingSystem)
+ 
+ 
+Get-MachineInfo - make "Dell", "Lenovo"
+ 
+

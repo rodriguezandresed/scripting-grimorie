@@ -1,0 +1,15 @@
+#specify parameters of a function
+
+
+Function Get-MachineInfo
+#we can use the $name to specifiy variables and call them in the function and separate with comma
+{ param ($make, $OperatingSystem)
+
+write-Host "I have $make Laptops with $OperatingSystem OS"
+}
+
+#we can call the parameter using the -name (same specified with parameter) when we excecute it
+
+Get-MachineInfo -make "Lenovo"
+
+Get-MachineInfo -make "IBM" -OperatingSystem "Windows"

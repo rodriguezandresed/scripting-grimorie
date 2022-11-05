@@ -1,0 +1,25 @@
+#Creating Simple Function
+#this is like an echo! (write-Host)
+write-Host "I have Dell Laptops with Windows OS"
+
+#this is where we create the function
+Function Get-MachineInfo
+
+#we chan change the scope of this function to global using  Function Global:Get-MachineInfo
+
+{
+write-Host "I have Dell Laptops with Windows OS"
+}
+
+#executing the function
+Get-MachineInfo
+
+#gci (get child item)  gets items and if the item is a container, it will get child items available inside the container.
+# Location specified in PowerShell Get-ChildItem can be file system directory, registry, or certificate store.
+
+
+#calling the function:\ drive
+
+# |fl * means format list
+
+gci function:\Get-MachineInfo |fl *

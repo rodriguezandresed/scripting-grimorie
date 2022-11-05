@@ -1,0 +1,22 @@
+#Creating a menu of possible values 
+
+
+Function Get-MachineInfo
+
+
+{
+
+
+[CmdLetBinding(SupportShouldProcess)]
+
+ param (
+[ValidateSet] ("Dell", "IBM", "Lenovo")]
+
+
+ [String[]]$make = "IBM", $OperatingSystem)
+
+Write-Verbose "Sharing Information about my Laptop Stock"
+write-Host "I have $make Laptops with $OperatingSystem OS"
+}
+
+
