@@ -152,10 +152,10 @@ example: `ping fakehost|Tee-Object .\teeout.txt`
 example: `gci .|Tee-Object .\filelist_currentfolder.txt|Measure-Object`
 
 We can also use redirection operators:
-
+```bash
 > sends specified stream to a file (overwriting)
 >> appends specified stream to a file
-
+```
 if the file doesn't exists, it will create it!
 
 example:" `ping fakehost > .\redirectionOperator.txt`
