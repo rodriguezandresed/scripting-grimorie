@@ -45,8 +45,8 @@ usually produce results, so tacking | gm onto the end won’t produce anything
 either.
 
 Pay attention to neat typing. Put a space on either side of every pipeline
-character, because your command lines should read as Get-Process | gm and
-not Get-Process|gm. That spacebar key is extra large for a reason—use it.
+character, because your command lines should read as `Get-Process | gm` and
+not `Get-Process|gm`. That spacebar key is extra large for a reason—use it.
 
 Remember that the pipeline can contain various types of objects at each step.
 Think about what type of object is in the pipeline, and focus on what the next
