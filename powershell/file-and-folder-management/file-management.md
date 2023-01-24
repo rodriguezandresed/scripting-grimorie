@@ -200,7 +200,7 @@ Example: `Remove-Item -Path .\* -Recurse`
 
 To remove files with special characters we can use
 
-`Get-ChildItem . |?{$_.name -like '*`[* '} | Remove-Item`
+`Get-ChildItem . |?{$_.name -like '*` [* '} | Remove-Item`
 
 ------------------------------------------------
 
@@ -214,7 +214,7 @@ Example: `Copy-Item -Path .\file3.txt -Destination .\Dir2 -PassThru`
 
 we can copy and rename a file with the same command
 
-`cp -Path .\file3.txt -Destination .\Dir2\Copied_renamed_file.txt``  
+`cp -Path .\file3.txt -Destination .\Dir2\Copied_renamed_file.txt`  
 
 The -Recurse parameter can be used to copy folders and subfolders as well
 
