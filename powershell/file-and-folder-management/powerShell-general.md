@@ -10,7 +10,7 @@ MAKE SURE THAT DURING THE INSTALATION THE ENV PATH GETS DEFINED!
 
 ---------------------------------
 
-The command PSVersionTable allows us to see the current version of powershell
+The command `PSVersionTable` allows us to see the current version of powershell
 
 ---------------------------------
 
@@ -40,11 +40,11 @@ Parameters: Full, Detailed, Examples, Online, Parameter, ShowWindow
 
 It's used to discover commands and know how to use commands.
 
-Example: Get-Help *service*
+Example: `Get-Help *service*`
 
-Example: Get-Help *service*  -Category Cmdlet
+Example: `Get-Help *service*  -Category Cmdlet`
 
-Example: Get-Help Get-Service -Parameter *
+Example: `Get-Help Get-Service -Parameter *`
 
 We can update documentation for commands by typing the command: Update-Help
 
@@ -53,6 +53,6 @@ We can update documentation for commands by typing the command: Update-Help
 Get-Command allows us to search for commands we don't know
 
 
-Example: Get-Command *service* -CommandType Cdmlet
+Example: `Get-Command *service* -CommandType Cdmlet`
 
-Example: Get-Command -Name get-service
+Example: `Get-Command -Name get-service`
