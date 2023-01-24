@@ -57,13 +57,14 @@ If we need to get to a certain depth of directories, for example, to see the ite
 
 
 The mode column from data fetched means the attribute of the item
-
+```bash
 d -> directory
 a -> archive
 r -> read only
 h -> hidden
 s -> system
 l -> link
+```
 
 the -Name parameter can be used to only fetch the name of items
 
@@ -165,41 +166,41 @@ Clear-Content or the alias clc is used to remove contents of files
 
 We can use the parameters -Filter, -Include -Excluse, -Force
 
-Example: clc -Path .\file_readonly7.txt -Force
+Example: `clc -Path .\file_readonly7.txt -Force`
 
 --------------------------------------------------------------
 
 Change properties of files
 
-Set-ItemProperty or the alias sp can be used to set the value of the key properties of items like file or Registry key
+`Set-ItemProperty` or the alias sp can be used to set the value of the key properties of items like file or Registry key
 
 the attributes can be IsReadOnly, Attributes, etc.
 
-The parameters -Path, -Name, -Value, -Confirm, -Force, -PassThru, -WhatIf
+The parameters `-Path, -Name, -Value, -Confirm, -Force, -PassThru, -WhatIf`
 
-Example: Set-ItemProperty -Path .\file1.txt -Name IsReadOnly -Value $true
+Example: `Set-ItemProperty -Path .\file1.txt -Name IsReadOnly -Value $true`
 
-Example: Get-ChildItem -Path .\dir2\* -Force | %{$_.Attributes = "Archive"}
+Example: `Get-ChildItem -Path .\dir2\* -Force | %{$_.Attributes = "Archive"}`
 
 ---------------------------------
 
 Remove Files & Directories
 
-Remove-Item or the alias ri, rm or rmdir deletes one or more items
+Remove-Item or the alias `ri, rm or rmdir` deletes one or more items
 
-We can use the parameters -Force, -Filter, -Include, -Exclude, -Confirm, -WhatIf
+We can use the parameters `-Force, -Filter, -Include, -Exclude, -Confirm, -WhatIf`
 
-Example: Remove-Item -Path .\file1.txt
-Example: Remove-Item HKLM:\SOFTWARE\Key_1
+Example: `Remove-Item -Path .\file1.txt`
+Example: `Remove-Item HKLM:\SOFTWARE\Key_1`
 
 
 To remove subfolders as well, we can use the -Recurse parameter
 
-Example: Remove-Item -Path .\* -Recurse
+Example: `Remove-Item -Path .\* -Recurse`
 
 To remove files with special characters we can use
 
-Get-ChildItem . |?{$_.name -like '*`[* '} | Remove-Item
+`Get-ChildItem . |?{$_.name -like '*`[* '} | Remove-Item`
 
 ------------------------------------------------
 
@@ -207,13 +208,13 @@ Copy files and directories
 
 Copy-Item or the alias copy, cp or cpi copies an item form one location to another
 
-we can use the parameters -Path, -Destination, -PassThru, -Force, -Include, -Exclude, -Filter, -WhatIf, -Confirm
+we can use the parameters `-Path, -Destination, -PassThru, -Force, -Include, -Exclude, -Filter, -WhatIf, -Confirm`
 
-Example: Copy-Item -Path .\file3.txt -Destination .\Dir2 -PassThru
+Example: `Copy-Item -Path .\file3.txt -Destination .\Dir2 -PassThru`
 
 we can copy and rename a file with the same command
 
-cp -Path .\file3.txt -Destination .\Dir2\Copied_renamed_file.txt 
+`cp -Path .\file3.txt -Destination .\Dir2\Copied_renamed_file.txt``  
 
 The -Recurse parameter can be used to copy folders and subfolders as well
 
@@ -224,12 +225,12 @@ Move Files and directories
 
 Move-Item or the alias mi or mv can be used to move files including it's properties, content and childitems to another location
 
-We can use the parameters -Path, -Destination, -WhatIf, -PassThru, -LiteralPath, -Confirm, -Filter, -Include, -Exclude, -Recurse, -Force
+We can use the parameters `-Path, -Destination, -WhatIf, -PassThru, -LiteralPath, -Confirm, -Filter, -Include, -Exclude, -Recurse, -Force`
 
-Move-Item -Path .\Dir1\file2.txt -Destination .\Dir2
+`Move-Item -Path .\Dir1\file2.txt -Destination .\Dir2`
 
 
-Get-ChildItem -Path ".\Dir2\*.txt" -Recurse | Move-Item -Destination ".\Dir1" -PassThru
+`Get-ChildItem -Path ".\Dir2\*.txt" -Recurse | Move-Item -Destination ".\Dir1" -PassThru`
 
 -----------------------------------------------
 
@@ -247,5 +248,5 @@ So we can't specify a different path with -NewName
 
 We can use the parameters -NewName, -PassThru, -Confirm, -WhatIf
 
-example: ren -Path ".\file1.txt" -NewName ".\Renamed_File.txt"
-example: ren -Path ".\Dr1" -NewName ".\Dir4"
+example: `ren -Path ".\file1.txt" -NewName ".\Renamed_File.txt"`
+example: `ren -Path ".\Dr1" -NewName ".\Dir4"`
