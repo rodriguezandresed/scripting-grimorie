@@ -229,10 +229,10 @@ Move-Item or the alias mi or mv can be used to move files including it's propert
 
 We can use the parameters `-Path, -Destination, -WhatIf, -PassThru, -LiteralPath, -Confirm, -Filter, -Include, -Exclude, -Recurse, -Force`
 
-`Move-Item -Path .\Dir1\file2.txt -Destination .\Dir2`
+example: `Move-Item -Path .\Dir1\file2.txt -Destination .\Dir2`
 
 
-`Get-ChildItem -Path ".\Dir2\*.txt" -Recurse | Move-Item -Destination ".\Dir1" -PassThru`
+example: `Get-ChildItem -Path ".\Dir2\*.txt" -Recurse | Move-Item -Destination ".\Dir1" -PassThru`
 
 -----------------------------------------------
 
@@ -251,4 +251,5 @@ So we can't specify a different path with -NewName
 We can use the parameters -NewName, -PassThru, -Confirm, -WhatIf
 
 example: `ren -Path ".\file1.txt" -NewName ".\Renamed_File.txt"`
+
 example: `ren -Path ".\Dr1" -NewName ".\Dir4"`
