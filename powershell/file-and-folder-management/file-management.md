@@ -3,12 +3,14 @@ We can use the New-Item or the alias ni command to create files, folders, regist
 Entries depend on location/provider, as if registry -> registry key or file system  -> files, folders, etc
 
 Example: 
+
 `New-Item -Path -Name "file1.txt"`
+
 `New-Item -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\UIPI -Name Test_Key`
 
 We can use the `-ItemType` parameter to define the type of Item so that It can be a File, Directory, SymbolicLink, Junction, HardLink
 
-Example: `New-Item -Path . -Name "Test_File.txt" -ItemType "file"`
+Example: ` New-Item -Path . -Name "Test_File.txt" -ItemType "file" `
 
 We can use the `-Confirm` parameter to give a confirmation prompt before running the cmdlet
 
