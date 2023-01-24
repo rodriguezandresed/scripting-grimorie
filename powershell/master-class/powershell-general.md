@@ -5,13 +5,13 @@ Functions created have global scope by default, if we create them in a script, t
 The Global keyword can be used to change the scope of a function
 
 You can use Get-Help <command> in order to get information about that command
-or Help <command> -ShowWindow 
-the ShowWindow parameter opens a window that will show the documentation (and it's customizable)
+or `Help <command> -ShowWindow `
+the `-ShowWindow` parameter opens a window that will show the documentation (and it's customizable)
 
 
 Best Practices:
 
-function name conventions of cmdlets i.e. - <Verb>-<noun> for example, Get-Information
+function name conventions of cmdlets i.e. - <Verb>-<noun> for example, `Get-Information`
 
 Syntax to create function:
 
