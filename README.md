@@ -1,5 +1,7 @@
-The following repository is a compilation of scripts I've done in order to practice scripting.
+The following repository is a compilation of scripts I've developped or taken as example in order to practice scripting and automation.
 
 Including sources such as:
 
 Learn PowerShell in a Month of Lunches - Travis Plunk, James Petty, Tyler Leonhardt, Don Jones, Jeffery Hicks
+
+Linux Shell Scripting: A project based approach to learning from Jason Canon
