@@ -19,3 +19,10 @@ Use `Install-Module` to download and install a module after you’ve found it.
 
 Use `Update-Module` to make sure your local copy of a module is the latest version, and if it isn’t, download and install the latest.
 PowerShellGet includes several other commands (http://PowerShellGallery.com  links to the documentation), but these are the ones you’ll start out using. For example, try installing the Azure PowerShell module, or Jeff Hicks’s PSScriptTools module from the PowerShell Gallery.
+
+
+Examples:
+
+`find-module * activedirectory * | Select Version,Name,Author,Description,PublishedDate` 
+
+`find-module -tag ad,activedirectory`
