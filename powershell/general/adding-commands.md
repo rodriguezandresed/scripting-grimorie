@@ -26,3 +26,5 @@ Examples:
 `find-module * activedirectory * | Select Version,Name,Author,Description,PublishedDate` 
 
 `find-module -tag ad,activedirectory`
+
+Remember Get-Command 
