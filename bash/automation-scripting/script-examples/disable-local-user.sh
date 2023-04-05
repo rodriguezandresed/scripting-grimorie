@@ -120,7 +120,7 @@ do
 		
 		#Check to see if the userdel command succeeded.
 		
-		if [[ "${?} -ne 0 ]]
+		if [[ "${?}" -ne 0 ]]
 		then
 			echo "The account ${USERNAME} was NOT deleted." >&2
 			exit 1

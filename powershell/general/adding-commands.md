@@ -27,4 +27,4 @@ Examples:
 
 `find-module -tag ad,activedirectory`
 
-Remember Get-Command 
+Remember Get-Command for example `Get-Command *firewall*`
